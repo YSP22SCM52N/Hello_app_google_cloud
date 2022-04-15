@@ -1,13 +1,13 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-args: ['build', '-t', 'gcr.io/able-math-347003/My First Project', '.']
+args: ['build', '-t', 'gcr.io/able-math-347003/myfirstproject', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/able-math-347003/My First Project']
-# Deploy container image to Cloud Run //added 
+  args: ['push', 'gcr.io/able-math-347003/myfirstproject']
+# Deploy container image to Cloud Run //added
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'My First Project', '--image', 'gcr.io/able-math-347003/My First Project', '--region', 'us-central1', '--platform', 'managed','--port','80']
+  args: ['run', 'deploy', 'myfirstproject', '--image', 'gcr.io/able-math-347003/myfirstproject', '--region', 'us-central1', '--platform', 'managed','--port','80']
 images:
-- gcr.io/able-math-347003/My First Project
+- gcr.io/able-math-347003/myfirstproject
