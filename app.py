@@ -58,7 +58,7 @@ def entry():
 # build a route or HTTP endpoint
 @app.route('/hello')
 def hello():
-    return 'Hello World!'
+    return 'Hello World 2.0!'
 
 ##### New Code #####
 # default HTML to show at first when no input is sent
